@@ -27,6 +27,13 @@ h2 {
     color: #555;
 }
 
+h3 {
+    font-size: 24px;
+    color: #eee;
+    font-weight:bold;
+    padding-top: 20px;
+}
+
 a:link {
     color: #319D9A;
 }
@@ -88,10 +95,22 @@ div.horizontal {
 }
 
 
+
 #road {
     position:absolute;
     bottom:0px;
     width: 1600px;
     height:200px;
     background:#555;
+}
+
+#building {
+    position:absolute;
+    bottom:300px;
+    width:1600px;
+    height:150px;
+}
+
+img {
+    vertical-align: bottom;
 }

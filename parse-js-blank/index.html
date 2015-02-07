@@ -13,12 +13,18 @@
 
 <body>
   <script>
+      Parse.initialize("9QuOki5qDSsmORyE9B1BZY7amwakfmRkaZlGAPz3", "92Hw22uMZLLyk1RxLXA4nkNwu4phLpSGuktEnRMP");
+
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '626331967494187',
-          xfbml      : true,
-          version    : 'v2.1'
+          status     : true,  // check Facebook Login status
+          cookie     : true,  // enable cookies to allow Parse to access the session
+          xfbml      : true,  // initialize Facebook social plugins on the page
+          version    : 'v2.2' // point to the latest Facebook Graph API version
         });
+ 
+        // Run code after the Facebook SDK is loaded.
       };
 
       (function(d, s, id){

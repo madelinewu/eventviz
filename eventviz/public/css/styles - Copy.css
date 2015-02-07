@@ -1,6 +1,6 @@
 
 #car {
-    z-level:5;
+    z-index:5;
     width:200px; 
     height:100px;
     left:100px;

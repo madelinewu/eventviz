@@ -1,5 +1,5 @@
 body {
-    background: #555;
+    background: #e3e3e3;
     font-family: calibri;
 }
 
@@ -9,7 +9,6 @@ body {
     left:50px;
     margin: auto;
     text-align: left;
-    background: #ddd;
     padding: 50px 60px;
     border: solid #fff;
     border-width: 0px 15px 15px 15px;

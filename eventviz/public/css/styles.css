@@ -13,6 +13,7 @@ body {
     padding: 50px 60px;
     border: solid #fff;
     border-width: 0px 15px 15px 15px;
+    z-index:3;
 }
 
 h1 {
@@ -97,6 +98,7 @@ div.horizontal {
 
 
 #road {
+    z-index:2;
     position:absolute;
     bottom:0px;
     width: 1600px;
@@ -105,6 +107,7 @@ div.horizontal {
 }
 
 #building {
+    z-index:1;
     position:absolute;
     bottom:300px;
     width:1600px;

@@ -118,7 +118,18 @@ window.fbAsyncInit = function() {
 <fb:login-button scope="public_profile,email, user_events" onlogin="checkLoginState();">
 </fb:login-button>
 
+<script>
+FB.api('/me', function(response) {
+    console.log(JSON.stringify(response));
+    document.getElementById('info').innerHTML =
+      'Info: ' + response + '!';
+});
+</script>
+
 <div id="status">
+</div>
+
+<div id="info">
 </div>
 
 </body>

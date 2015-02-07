@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "eventviz"
+        }, 
+        "eventviz": {
+            "applicationId": "9QuOki5qDSsmORyE9B1BZY7amwakfmRkaZlGAPz3", 
+            "masterKey": "BdMkTNSVt5sfF4vRFQLOzYAbbFC2yE7RBj8xwZqE"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.4"
+    }
+}

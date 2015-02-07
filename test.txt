@@ -1,2 +1,7 @@
 hi testinggggg
+<<<<<<< HEAD
+hi guyys
+=======
 HI ANG
+>>>>>>> f75ba0a3763af46194f6c618393f3f22783c077f
+new chat system right here

@@ -105,12 +105,20 @@ div.horizontal {
     background:#555;
 }
 
-#building {
+#buildingholder {
     z-index:1;
     position:absolute;
-    bottom:300px;
+    bottom:200px;
     width:1600px;
     height:150px;
+    margin-left: 300px;
+}
+
+#building {
+    float: left;
+    width:75px;
+    height:150px;
+    background-color: #000;
 }
 
 img {

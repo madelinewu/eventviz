@@ -15,6 +15,15 @@ body {
     z-index:3;
 }
 
+#maincar {
+    width: 15%;
+    position: fixed;
+    left:50px;
+    top:500px;
+    z-index:4;
+}
+
+
 h1 {
     margin-top: 0;
     font-size: 35px;

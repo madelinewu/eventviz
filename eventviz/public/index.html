@@ -40,6 +40,7 @@
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
+      getEvents();
   } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -105,7 +106,22 @@ window.fbAsyncInit = function() {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
       'Thanks for logging in, ' + response.name + '!';
+
   });
+}
+
+function getEvents() {
+    console.log('Here\'s your events!');
+    FB.api("/me/events/attending", function (response) {
+       console.log('Successful info: ' + response.data[0].name);
+       console.log("People attending: " + response.data.length);
+      document.getElementById('info').innerHTML =
+      'Info: ' + response.data[0].name + " People attending: " + response.data.length; 
+      // if (response && !response.error) {
+      //   /* handle the result */
+      // }
+    }
+);
 }
 </script>
 
@@ -117,14 +133,6 @@ window.fbAsyncInit = function() {
 
 <fb:login-button scope="public_profile,email, user_events" onlogin="checkLoginState();">
 </fb:login-button>
-
-<script>
-FB.api('/me', function(response) {
-    console.log(JSON.stringify(response));
-    document.getElementById('info').innerHTML =
-      'Info: ' + response + '!';
-});
-</script>
 
 <div id="status">
 </div>

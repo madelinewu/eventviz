@@ -177,8 +177,10 @@ function makeFBCALL(eid, ename){
         $(building).css('height', tall);
         var name = $("<div>");
         name.html(ename);
+        $(name).css('color', "#FFFFFF");
+        building.append(name);
         $("#"+buildingContainer).append(building);
-        $("#"+buildingContainer).append(name);
+        // $("#"+buildingContainer).append(name);
     });
 }
 

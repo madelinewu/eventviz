@@ -126,8 +126,9 @@ div.horizontal {
 .building {
     float: left;
     width:75px;
-    height:150px;
+    /*height:150px;*/
     background-color: #000;
+    bottom: 0px;
 }
 
 img {

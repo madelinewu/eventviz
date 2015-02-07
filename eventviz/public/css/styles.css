@@ -124,11 +124,29 @@ div.horizontal {
 }
 
 .building {
+    position: absolute;
     float: left;
-    width:75px;
+    width:100px;
     /*height:150px;*/
     background-color: #000;
+    /*bottom: 100%;*/
     bottom: 0px;
+    vertical-align: bottom;
+    margin-top: auto;
+}
+
+.building:before{
+    display: block;
+}
+
+.buildFrame {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100%;
+    margin-right:20px;
+    bottom: 0px;
+    vertical-align: bottom;
 }
 
 img {

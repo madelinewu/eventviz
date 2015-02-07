@@ -167,11 +167,21 @@ function makeFBCALL(eid, ename){
 
         console.log("done");
         var building = $("<div>");
+        var buildFrame = $("<div>");
         building.addClass("building");
+        buildFrame.addClass("buildFrame");
         var tall = response.data.length;
-        if (tall > 300)
+        if (tall < 200)
         {
-            tall = 300;
+            tall = tall * 1.50;
+        }
+        if (tall > 350)
+        {
+            tall = tall * 0.75;
+        }
+        if (tall > 400)
+        {
+            tall = 400;
         }
         // building.attr("height", tall);
         $(building).css('height', tall);
@@ -179,7 +189,8 @@ function makeFBCALL(eid, ename){
         name.html(ename);
         $(name).css('color', "#FFFFFF");
         building.append(name);
-        $("#"+buildingContainer).append(building);
+        buildFrame.append(building);
+        $("#"+buildingContainer).append(buildFrame);
         // $("#"+buildingContainer).append(name);
     });
 }

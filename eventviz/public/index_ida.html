@@ -32,10 +32,11 @@ $(window).resize(function() {
 <h1>EventViz</h2>
 <h2>chow x qiu x wu</h2>
 
-<p>Let's roadtrip through your events!<br>
-Note: (left) or (right) to navigate</p>
+<p>Let's roadtrip through your events!
+<br>Note: (left) or (right) to navigate.</br>
+</p>
 
-<P>We're on <a href="http://github.com/madelinewu/eventviz">GitHub</a>!</P>
+<P>on <a href="http://github.com/madelinewu/eventviz">GitHub</a>.</P>
 
 
 
@@ -54,6 +55,7 @@ Note: (left) or (right) to navigate</p>
       // Logged into your app and Facebook.
       testAPI();
       getEvents();
+      getSpecificEvent();
   } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -131,7 +133,7 @@ function getEvents() {
     });
 }
 function getSpecificEvent() {
-    FB.api("/me/events/310990385777342/attending", function (response) {
+    FB.api("/310990385777342/attending", function (response) {
 
         console.log("this event has: " + response.data);
 
@@ -154,6 +156,8 @@ function getSpecificEvent() {
 <div id="info">
 </div>
 
+</body>
+</html>
 
 <!-- <!doctype html>
 <head>
@@ -254,25 +258,21 @@ function getSpecificEvent() {
  <div class="horizontal">
     <div class="table">
         <section>
-            <h1>Full-Screen Horizontal Layouts</h1>
-            <P>bb we go down in fla a a mes</P>
+        <div id="road">
+        &nbsp;
+        </div>
         </section>
 
-
         <section>
-          <div id="road">
-          &nbsp;
-          </div>
+        <div id="road">
+        &nbsp;
+        </div>
         </section>
 
-
         <section>
-            <h1>Full-Screen Horizontal Layouts</h1>
-            <P>bb we go down in fla a a mes</P>
+        <div id="road">
+        &nbsp;
+        </div>
         </section>
     </div>
 </div>
-
-
-</body>
-</html>

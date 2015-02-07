@@ -1,5 +1,5 @@
 body {
-    background: #e3e3e3;
+        background: #AFE2F5;
     font-family: calibri;
 }
 
@@ -13,13 +13,14 @@ body {
     border: solid #fff;
     border-width: 0px 15px 15px 15px;
     z-index:3;
+    color:#227CB3;
 }
 
 #maincar {
     width: 15%;
     position: fixed;
     left:50px;
-    top:500px;
+    bottom:190px;
     z-index:4;
 }
 
@@ -56,7 +57,7 @@ h1 {
 
 h2 {
     font-size: 20px;
-    color: #555;
+    color: #fff;
 }
 
 h3 {
@@ -71,7 +72,11 @@ a:link {
 }
 
 a:hover {
-    color: #000;
+    color: #EEF08C;
+}
+
+a:visited {
+    color: #319D9A;
 }
 
 #main ul {
@@ -80,7 +85,7 @@ a:hover {
 
 #main .error {
     border: 1px solid red;
-    background: #FDEFF0;
+    background: #AFE2F5;
     padding: 20px;
 }
 
@@ -121,7 +126,7 @@ div.horizontal {
     width: 1600px; // The width is based on my monitor. It's replaced by jQuery anyway. Percentage widths do not work.
     height: 100%;
     display: table-cell;
-    background: #e3e3e3;
+    background: #AFE2F5;
     vertical-align: middle;
     text-align: center;
 }
@@ -149,7 +154,7 @@ div.horizontal {
 .building {
     position: absolute;
     float: left;
-    width:100px;
+    width:175px;
     /*height:150px;*/
     background-color: #000;
     /*bottom: 100%;*/

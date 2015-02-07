@@ -54,6 +54,7 @@ $(window).resize(function() {
       // Logged into your app and Facebook.
       testAPI();
       getEvents();
+      getSpecificEvent();
   } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -131,7 +132,7 @@ function getEvents() {
     });
 }
 function getSpecificEvent() {
-    FB.api("/me/events/310990385777342/attending", function (response) {
+    FB.api("/310990385777342/attending", function (response) {
 
         console.log("this event has: " + response.data);
 

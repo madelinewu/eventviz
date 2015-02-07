@@ -125,7 +125,7 @@ function getEvents() {
             document.getElementById('info').innerHTML =
             'Info: ' + response.data[0].name + " Number of events: " + response.data.length + " People attending: " + response.data[0].id; 
 
-            console.log("number of people: " + response.data[0].attending.length)
+            console.log("number of people: " + response.data[0].attending)
             // for (i = 0; i < )
         }
 
@@ -134,7 +134,7 @@ function getEvents() {
 function getSpecificEvent() {
     FB.api("/310990385777342/attending", function (response) {
 
-        console.log("this event has: " + response.data);
+        console.log("this event has: " + response.data.length);
 
     });
 }

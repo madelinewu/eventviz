@@ -62,7 +62,6 @@ html, body {
     overflow: hidden;
 }
 
-// In this case, I didn't want a scrollbar, so I used overflow: hidden. The container element is more essential than ever, though. The body element will not do.
 div.horizontal {
     display: block;
     width: 100%;
@@ -79,10 +78,16 @@ div.horizontal {
 }
 
 .table > section {
-    width: 1600px; // The width is based on my monitor. It's replaced by jQuery anyway. Percentage widths do not work.
+    width: 1600px; 
     height: 100%;
     display: table-cell;
     background: #e3e3e3;
     vertical-align: middle;
     text-align: center;
+}
+
+#road {
+    width: 1600px;
+    height:200px;
+    background:#000000;
 }

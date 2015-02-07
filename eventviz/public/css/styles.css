@@ -24,6 +24,29 @@ body {
     z-index:4;
 }
 
+#cloudingonce {
+    width: 15%;
+    position: fixed;
+    right:50px;
+    top:100px;
+    z-index:4;
+}
+
+#cloudingtwice {
+    width: 15%;
+    position: fixed;
+    right:200px;
+    top:130px;
+    z-index:4;
+}
+
+#cloudingthrice {
+    width: 15%;
+    position: fixed;
+    right:220px;
+    top:105px;
+    z-index:4;
+}
 
 h1 {
     margin-top: 0;
@@ -147,7 +170,7 @@ div.horizontal {
 .buildFrame {
     position: relative;
     float: left;
-    width: 100px;
+    width: 175px;
     height: 100%;
     margin-right:20px;
     bottom: 0px;

@@ -3,8 +3,8 @@
     z-index:5;
     width:200px; 
     height:100px;
-    left:100px;
-    bottom:100px;
+    left:0px;
+    top:600px;
     position:absolute;
 }
 

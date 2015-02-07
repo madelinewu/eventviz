@@ -42,6 +42,7 @@ $(window).resize(function() {
 
 
     <script>
+    buildingContainer = "buildingholder";
     var eventIDS = [];
     var eventNames = [];
   // This is called with the results from from FB.getLoginStatus().
@@ -55,9 +56,9 @@ $(window).resize(function() {
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
-      getEvents();
+      getEvents(getEventInfo);
       console.log("length: " + eventIDS.length);
-      for (i = 0; i < eventIDS.length; i++)
+      for (var i = 0; i < eventIDS.length; i++)
       {
         console.log("event name: " + eventNames[i]);
         getSpecificEvent(eventIDS[i]);
@@ -122,7 +123,7 @@ window.fbAsyncInit = function() {
       'Thanks for logging in, ' + response.name + '!';
   });
 }
-function getEvents() {
+function getEvents(callback) {
     console.log('Here\'s your events!');
     FB.api("/me/events/attending", function (response) {
 
@@ -133,22 +134,42 @@ function getEvents() {
             'Info: ' + response.data[0].name + " Number of events: " + response.data.length + " People attending: " + response.data[0].id; 
 
             // console.log("number of people: " + response.data[0].attending)
-            for (i = 0; i < response.data.length; i++)
+            for (var i = 0; i < response.data.length; i++)
             {
                 eventIDS[i] = response.data[i].id;
                 eventNames[i] = response.data[i].name;
             }
         }
-
+        callback();
     });
 }
-function getSpecificEvent(id) {
-    FB.api("/{$id}/attending", function (response) {
+function getEventInfo()
+{
+    for (var i = 0; i < eventIDS.length; i++)
+    {
+        var eid = eventIDS[i];
+        var ename = eventNames[i];
+        makeFBCALL(eid, ename)
+        console.log("i: "+ i); 
+    }
+}
 
+function makeFBCALL(eid, ename){
+    FB.api("/"+eid+"/attending", function (response) {
+        console.log(response);
         console.log("this event has: " + response.data.length);
 
+        console.log("done");
+        var building = $("<div>");
+        building.addClass("building");
+        building.attr("height", response.data.length);
+        var name = $("<div>");
+        name.html(ename);
+        $("#"+buildingContainer).append(building);
+        $("#"+buildingContainer).append(name);
     });
 }
+
 </script>
 
 <!--
@@ -273,6 +294,8 @@ function getSpecificEvent(id) {
         <section>
 
         </section>
+    </div>
+    <div id = "buildingholder">
     </div>
 </div>
 

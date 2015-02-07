@@ -42,6 +42,8 @@ $(window).resize(function() {
 
 
     <script>
+    var eventIDS = [];
+    var eventNames = [];
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -54,7 +56,12 @@ $(window).resize(function() {
       // Logged into your app and Facebook.
       testAPI();
       getEvents();
-      getSpecificEvent();
+      console.log("length: " + eventIDS.length);
+      for (i = 0; i < eventIDS.length; i++)
+      {
+        console.log("event name: " + eventNames[i]);
+        getSpecificEvent(eventIDS[i]);
+      }
   } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -125,14 +132,18 @@ function getEvents() {
             document.getElementById('info').innerHTML =
             'Info: ' + response.data[0].name + " Number of events: " + response.data.length + " People attending: " + response.data[0].id; 
 
-            console.log("number of people: " + response.data[0].attending)
-            // for (i = 0; i < )
+            // console.log("number of people: " + response.data[0].attending)
+            for (i = 0; i < response.data.length; i++)
+            {
+                eventIDS[i] = response.data[i].id;
+                eventNames[i] = response.data[i].name;
+            }
         }
 
     });
 }
-function getSpecificEvent() {
-    FB.api("/310990385777342/attending", function (response) {
+function getSpecificEvent(id) {
+    FB.api("/{$id}/attending", function (response) {
 
         console.log("this event has: " + response.data.length);
 

@@ -68,6 +68,7 @@ h3 {
     bottom:100px;
     font-weight:bold;
     padding-top: 20px;
+    z-index:99;
 }
 
 a:link {

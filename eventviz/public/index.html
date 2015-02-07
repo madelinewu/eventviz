@@ -13,6 +13,22 @@
 <body>
 
 
+
+<script>
+$(window).load(function() {
+    var vWidth = $(window).width();
+    var vHeight = $(window).height();
+    $('.table > section').css('width', vWidth).css('height', vHeight);
+});
+
+$(window).resize(function() {
+    var vWidth = $(window).width();
+    var vHeight = $(window).height();
+    $('.table > section').css('width', vWidth).css('height', vHeight);
+});
+</script>
+
+
 <div id="main">
 <h1>EventViz</h2>
 <h2>chow x qiu x wu</h2>
@@ -22,7 +38,6 @@
 <P>on <a href="http://github.com/madelinewu/eventviz">GitHub</a>.</P>
 
 <P>should stop trying to :wq</P>
-
 
 
 
@@ -247,3 +262,21 @@ function getEvents() {
  -->
 
  </div>
+
+
+
+
+
+ <div class="horizontal">
+    <div class="table">
+        <section>
+            <h1>Full-Screen Horizontal Layouts</h1>
+            <P>bb we go down in fla a a mes</P>
+        </section>
+        <!-- Repeat this part as necessary. -->
+        <section>
+            <h1>Full-Screen Horizontal Layouts</h1>
+            <P>you can tell me when its over</P>
+        </section>
+    </div>
+</div>

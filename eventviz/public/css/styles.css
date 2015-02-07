@@ -1,12 +1,11 @@
 body {
     background: #555;
-    text-align: center;
     font-family: calibri;
 }
 
 #main {
     width: 15%;
-    position: absolute;
+    position: fixed;
     left:50px;
     margin: auto;
     text-align: left;
@@ -54,4 +53,36 @@ a:hover {
     font-size: 12px;
     color: green;
     line-height: 13px;
+}
+
+// Don't touch this part. It helps.
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+// In this case, I didn't want a scrollbar, so I used overflow: hidden. The container element is more essential than ever, though. The body element will not do.
+div.horizontal {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: static;
+}
+
+.table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.table > section {
+    width: 1600px; // The width is based on my monitor. It's replaced by jQuery anyway. Percentage widths do not work.
+    height: 100%;
+    display: table-cell;
+    background: #e3e3e3;
+    vertical-align: middle;
+    text-align: center;
 }

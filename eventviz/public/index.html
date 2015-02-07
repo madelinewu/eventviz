@@ -173,7 +173,8 @@ function makeFBCALL(eid, ename){
         {
             tall = 300;
         }
-        building.attr("height", tall);
+        // building.attr("height", tall);
+        $(building).css('height', tall);
         var name = $("<div>");
         name.html(ename);
         $("#"+buildingContainer).append(building);
